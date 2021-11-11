@@ -24,12 +24,12 @@
             <h3>Pogodi 6 od 48 brojeva</h3>
         </div>
         <div class="round">
-            <h3 id="roundNum">RUNDA:&nbsp;1</h3>
+            <h3 id="roundNumber">RUNDA:&nbsp;1</h3>
         </div>
     </div>
 
     <div id="sectors">
-        <div id="sectorFirst">
+        <div class="sideSector">
             <div class="a6">
                 <div id="circle6" class="circle">
                 </div>
@@ -94,8 +94,8 @@
                 </div>
             </div>
         </div>      
-        <div id="sectorCenter">
-            <div id="sectorSecond">
+        <div class="centerSector">
+            <div class="mainSector">
                 <div class="drumBox">
                     <div id="drum">
 
@@ -116,57 +116,9 @@
                     </div>
                 </div>
             </div>
-            <div class="wrapperTest">
-                <div id="sectorThird">
-                    <div class="leftSide">
-                        <div class="a21">
-                            <div id="circle21" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;40</p>
-                            </div>
-                        </div>
-                        <div class="a22">
-                            <div  id="circle22" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;30</p>
-                            </div>
-                        </div>
-                        <div class="a23">
-                            <div id="circle23" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;25</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="rightSide">
-                        <div class="a24">
-                            <div id="circle24" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;20</p>
-                            </div>
-                        </div>
-                        <div class="a25">
-                            <div id="circle25" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;15</p>
-                            </div>
-                        </div>
-                        <div class="a26">
-                            <div id="circle26" class="circle">
-                            </div>
-                            <div class="value">
-                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;10</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div id="sectorFourth">
-                    <div class="leftSide">
+            <div class="wrapperSectors">
+                <div class="sector">
+                    <div class="side">
                         <div class="a15">
                             <div id="circle15" class="circle">
                             </div>
@@ -189,7 +141,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="rightSide">
+                    <div class="side">
                         <div class="a18">
                             <div  id="circle18" class="circle">
                             </div>
@@ -213,9 +165,58 @@
                         </div>
                     </div>
                 </div>
+                <div class="sector">
+                    <div class="side">
+                        <div class="a21">
+                            <div id="circle21" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;40</p>
+                            </div>
+                        </div>
+                        <div class="a22">
+                            <div  id="circle22" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;30</p>
+                            </div>
+                        </div>
+                        <div class="a23">
+                            <div id="circle23" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;25</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="side">
+                        <div class="a24">
+                            <div id="circle24" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;20</p>
+                            </div>
+                        </div>
+                        <div class="a25">
+                            <div id="circle25" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;15</p>
+                            </div>
+                        </div>
+                        <div class="a26">
+                            <div id="circle26" class="circle">
+                            </div>
+                            <div class="value">
+                                <p><span class="glyphicon glyphicon-play"></span>&nbsp;10</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+               
             </div>
         </div>
-        <div id="sectorFifth">
+        <div class="sideSector">
             <div class="a27">
                 <div id="circle27" class="circle">
                 </div>
@@ -285,8 +286,7 @@
 	<div id="pause">
 		<div id="statistics">
 			<div id="drawnBalls">
-				<!-- a, b, c, d, e, f, g, h -> klase koje cekiraju kruzic ispod brojeva (primer u main.js linije 181-186) -->
-				<div class="redColumn">
+				<div class="column">
 					<div class="red1 inactive">1</div>
 					<div class="red9 inactive">9</div>
 					<div class="red17 inactive">17</div>
@@ -295,7 +295,7 @@
 					<div class="red41 inactive">41</div>
 					<div class="check checkred"></div>
 				</div>
-				<div class="greenColumn">
+				<div class="column">
 					<div class="green2 inactive">2</div>
 					<div class="green10 inactive">10</div>
 					<div class="green18 inactive">18</div>
@@ -304,7 +304,7 @@
 					<div class="green42 inactive">42</div>
 					<div class="check checkgreen"></div>
 				</div>
-				<div class="blueColumn">
+				<div class="column">
 					<div class="blue3 inactive">3</div>
 					<div class="blue11 inactive">11</div>
 					<div class="blue19 inactive">19</div>
@@ -313,7 +313,7 @@
 					<div class="blue43 inactive">43</div>
 					<div class="check checkblue"></div>
 				</div>
-				<div class="purpleColumn">
+				<div class="column">
 					<div class="purple4 inactive">4</div>
 					<div class="purple12 inactive">12</div>
 					<div class="purple20 inactive">20</div>
@@ -322,7 +322,7 @@
 					<div class="purple44 inactive">44</div>
 					<div class="check checkpurple"></div>
 				</div>
-				<div class="brownColumn">
+				<div class="column">
 					<div class="brown5 inactive">5</div>
 					<div class="brown13 inactive">13</div>
 					<div class="brown21 inactive">21</div>
@@ -331,7 +331,7 @@
 					<div class="brown45 inactive">45</div>
 					<div class="check checkbrown"></div>
 				</div>
-				<div class="yellowColumn">
+				<div class="column">
 					<div class="yellow6 inactive">6</div>
 					<div class="yellow14 inactive">14</div>
 					<div class="yellow22 inactive">22</div>
@@ -340,7 +340,7 @@
 					<div class="yellow46 inactive">46</div>
 					<div class="check checkyellow"></div>
 				</div>
-				<div class="orangeColumn">
+				<div class="column">
 					<div class="orange7 inactive">7</div>
 					<div class="orange15 inactive">15</div>
 					<div class="orange23 inactive">23</div>
@@ -349,7 +349,7 @@
 					<div class="orange47 inactive">47</div>
 					<div class="check checkorange"></div>
 				</div>
-				<div class="blackColumn">
+				<div class="column">
 					<div class="black8 inactive">8</div>
 					<div class="black16 inactive">16</div>
 					<div class="black24 inactive">24</div>
@@ -406,7 +406,7 @@
 
     <div id="footer">
 		<div class="bettingOnColor">
-			<p>Kladjenje na <br/>boju</p>
+			<p>Klađenje na <br/>boju</p>
 			<div id="redBar"></div>
 			<div id="greenBar"></div>
 			<div id="blueBar"></div>

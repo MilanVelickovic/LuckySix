@@ -1,12 +1,11 @@
-localStorage.setItem("round", "1");
-
 $(document).ready(function () {
+    if (!localStorage.getItem("round")) {
+        window.localStorage.setItem("round", "1");
+    }
 
     /*------- R O U N D S -------*/
-    setInterval(() => {
-        document.getElementById("roundNum").innerHTML = "Runda:&nbsp;" +  localStorage.getItem("round");
-        localStorage.setItem("round", parseInt(localStorage.getItem("round")) + 1);
-    }, 164000);
+    document.getElementById("roundNumber").innerHTML = "Runda:&nbsp;" +  window.localStorage.getItem("round");
+    localStorage.setItem("round", parseInt(window.localStorage.getItem("round")) + 1);
 
 
     let gameOn = true;
@@ -16,10 +15,10 @@ $(document).ready(function () {
 
         if (gameOn) {
             $("#sectors").css("display","none");
-            $("#pause").css("display","block");
+            $("#pause").css("display","flex");
         } else {
             $("#pause").css("display","none");
-            $("#sectors").css("display","block");       
+            $("#sectors").css("display","flex");       
         }
         gameOn = !gameOn
         time + 20000;
@@ -94,12 +93,11 @@ $(document).ready(function () {
         
         let circleTag = "circle" + i;
       
-        document.getElementById(circleTag).innerHTML = "";
+        //document.getElementById(circleTag).innerHTML = "";
         
-        // C
         let drum = document.getElementById("drum");
         drum.style.backgroundColor = "#FFF";
-        drum.style.border = `10px solid ${color}`;
+        drum.style.border = `20px solid ${color}`;
         drum.style.fontSize = "60px";
         drum.style.transition = "2s ease-in-out";
         drum.setAttribute("class", "currentBall " + color);
@@ -133,7 +131,7 @@ $(document).ready(function () {
 
         } else {
           $("#" + circleTag).append(
-            `<div id="${circleTag}" class="smallBall ${color}">${rand}</div>`
+            `<div id="${circleTag}" class="smallBall ${color}"><p>${rand}</p></div>`
           );
         }
       
@@ -165,62 +163,78 @@ $(document).ready(function () {
     (theLoop = i => {
         setTimeout(function () {
             let rand = createUniqueNumber();
+            let numbers = [ 
+                {
+                    "colorName": "red",
+                    "numbers": [1, 9, 17, 25, 33, 41],
+                    "colorNumber": 0,
+                    "translatedColorName": "CRVENA"
+                },
+                {
+                    "colorName": "green",
+                    "numbers": [2, 10, 18, 26, 34, 42],
+                    "colorNumber": 1,
+                    "translatedColorName": "ZELENA"
+                },
+                {
+                    "colorName": "blue",
+                    "numbers": [3, 11, 19, 27, 35, 43],
+                    "colorNumber": 2,
+                    "translatedColorName": "PLAVA"
+                },
+                {
+                    "colorName": "purple",
+                    "numbers": [4, 12, 20, 28, 36, 44],
+                    "colorNumber": 3,
+                    "translatedColorName": "LJUBIČASTA"
+                },
+                {
+                    "colorName": "brown",
+                    "numbers": [5, 13, 21, 29, 37, 45],
+                    "colorNumber": 4,
+                    "translatedColorName": "BRAON"
+                },
+                {
+                    "colorName": "yellow",
+                    "numbers": [6, 14, 22, 30, 38, 46],
+                    "colorNumber": 5,
+                    "translatedColorName": "ŽUTA"
+                },
+                {
+                    "colorName": "orange",
+                    "numbers": [7, 15, 23, 31, 39, 47],
+                    "colorNumber": 6,
+                    "translatedColorName": "NARANDŽASTA"
+                },
+                {
+                    "colorName": "black",
+                    "numbers": [8, 16, 24, 32, 40, 48],
+                    "colorNumber": 7,
+                    "translatedColorName": "CRNA"
+                }
+            ];
 
-            let numbers = {
-                "redNumbers": [1, 9, 17, 25, 33, 41],
-                "greenNumbers": [2, 10, 18, 26, 34, 42],
-                "blueNumbers": [3, 11, 19, 27, 35, 43],
-                "purpleNumbers": [4, 12, 20, 28, 36, 44],
-                "brownNumbers": [5, 13, 21, 29, 37, 45],
-                "yellowNumbers": [6, 14, 22, 30, 38, 46],
-                "orangeNumbers": [7, 15, 23, 31, 39, 47],
-                "blackNumbers": [8, 16, 24, 32, 40, 48]
-            }
-            
-            var drumColor;
-            if (numbers["redNumbers"].includes(rand)) {
-                testPart(i, "red", "CRVENA", 0, rand);
-                drumColor = `#drumRed`;
-            } else if (numbers["greenNumbers"].includes(rand)) {
-                testPart(i, "green", "ZELENA", 1, rand);  
-                drumColor = `#drumBlue`;      
-            } else if (numbers["blueNumbers"].includes(rand)) {
-                testPart(i, "blue", "PLAVA", 2, rand);  
-                drumColor = `#drumBlue`;      
-            } else if (numbers["purpleNumbers"].includes(rand)) {
-                testPart(i, "purple", "LJUBIČASTA", 3, rand);   
-                drumColor = `#drumPurple`;     
-            } else if (numbers["brownNumbers"].includes(rand)) {
-                testPart(i, "brown", "BRAON", 4, rand);
-                drumColor = `#drumBrown`;        
-            } else if (numbers["yellowNumbers"].includes(rand)) {
-                testPart(i, "yellow", "ŽUTA", 5, rand);
-                drumColor = `#drumYellow`;
-            } else if (numbers["orangeNumbers"].includes(rand)) {
-                testPart(i, "orange", "NARANDŽASTA", 6, rand);
-                drumColor = `#drumOrange`;
-            } else if (numbers["blackNumbers"].includes(rand)) {
-                testPart(i, "black", "CRNA", 7, rand);
-                drumColor = `#drumBlack`;
-            }
+            numbers.forEach(numbersObject => {
+                if (numbersObject["numbers"].includes(rand)) {
+                    testPart(i, numbersObject["colorName"], numbersObject["translatedColorName"], numbersObject["colorNumber"], rand);
+                }
+            });
 
-            // Average
-            // 48/2=24,5
-            if (i==1 && rand > 24.5) {
-                document.getElementById("underAbove").innerHTML = "IZNAD";
-            } else if (i==1 && rand < 24.5) {
-                document.getElementById("underAbove").innerHTML = "ISPOD";
-            }
-            
-            // Even Odd
-            if (i == 1) {
+            if (i == 1 ) {
+                // Average - 48/2=24,5
+                if (rand > 24.5) {
+                    document.getElementById("underAbove").innerHTML = "IZNAD";
+                } else {
+                    document.getElementById("underAbove").innerHTML = "ISPOD";
+                }   
+                // Even Odd
                 if (rand % 2 == 0) {
                     document.getElementById("evenOdd").innerHTML = "PAR";
                 } else {
                     document.getElementById("evenOdd").innerHTML = "NEPAR";
                 }
             }
-
+            
             // Data 1 - color bars
             $("#redBar").css("height", colors[0]*7);
             $("#greenBar").css("height", colors[1]*7);
@@ -231,7 +245,7 @@ $(document).ready(function () {
             $("#orangeBar").css("height", colors[6]*7);
             $("#blackBar").css("height", colors[7]*7);
 
-            // Data 3
+            // Data 2
             if (data2 > 122.5) {
                 $(".above").css("color","white");
                 $(".under").css("color","#848080");

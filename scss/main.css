@@ -275,6 +275,38 @@ body h1, body h2, body h3 {
   margin-top: 10px;
 }
 
+#sectors .sideSector .circle,
+#sectors .centerSector .wrapperSectors .sector .side div .circle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 50px;
+  width: 50px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 2px solid #2dce2d;
+  background: rgba(22, 22, 22, 0.7);
+}
+
+#sectors .sideSector .value,
+#sectors .centerSector .wrapperSectors .sector .side div .value {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFF;
+}
+
+#sectors .sideSector .value p,
+#sectors .centerSector .wrapperSectors .sector .side div .value p {
+  margin: 0;
+}
+
 #sectors {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -291,7 +323,7 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorFirst, #sectors #sectorFifth {
+#sectors .sideSector {
   height: 780px;
   width: 19%;
   padding: 40px 0px;
@@ -310,7 +342,7 @@ body h1, body h2, body h3 {
           align-items: flex-start;
 }
 
-#sectors #sectorFirst div, #sectors #sectorFifth div {
+#sectors .sideSector div {
   display: inherit;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
@@ -324,27 +356,7 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorFirst .circle, #sectors #sectorFifth .circle {
-  height: 45px;
-  width: 45px;
-  margin-right: 15px;
-  border-radius: 50%;
-  border: 2px solid #2dce2d;
-  background: rgba(22, 22, 22, 0.7);
-}
-
-#sectors #sectorFirst .value, #sectors #sectorFifth .value {
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 20px;
-  color: #FFF;
-}
-
-#sectors #sectorFirst .value p, #sectors #sectorFifth .value p {
-  margin: 0;
-}
-
-#sectors #sectorCenter {
+#sectors .centerSector {
   width: 62%;
   height: 780px;
   display: -webkit-box;
@@ -362,7 +374,7 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorCenter #sectorSecond {
+#sectors .centerSector .mainSector {
   margin-top: 7px;
   width: 580px;
   height: 498px;
@@ -379,7 +391,7 @@ body h1, body h2, body h3 {
           align-items: inherit;
 }
 
-#sectors #sectorCenter #sectorSecond .drumBox #drum {
+#sectors .centerSector .mainSector .drumBox #drum {
   width: 450px;
   height: 450px;
   background: rgba(22, 22, 22, 0.7);
@@ -387,35 +399,36 @@ body h1, body h2, body h3 {
   border-radius: 50%;
 }
 
-#sectors #sectorCenter #sectorSecond .firstFiveBox .firstFive {
-  display: inherit;
+#sectors .centerSector .mainSector .firstFiveBox .firstFive {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: inherit;
-      -ms-flex-align: inherit;
-          align-items: inherit;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100px;
   height: 450px;
+  padding: 15px 0px;
   background: rgba(22, 22, 22, 0.7);
   border: 2px solid #2dce2d;
   border-radius: 30px;
 }
 
-#sectors #sectorCenter #sectorSecond .firstFiveBox .firstFive .circle {
-  height: 55px;
-  width: 55px;
+#sectors .centerSector .mainSector .firstFiveBox .firstFive .circle {
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   border: 2px solid #2dce2d;
   background: #2e9b2e;
-  margin: 28px 0px 0px 22px;
 }
 
-#sectors #sectorCenter .wrapperTest {
+#sectors .centerSector .wrapperSectors {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -432,7 +445,7 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorCenter .wrapperTest #sectorThird, #sectors #sectorCenter .wrapperTest #sectorFourth {
+#sectors .centerSector .wrapperSectors .sector {
   width: 50%;
   display: inherit;
   -ms-flex-pack: distribute;
@@ -442,7 +455,7 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorCenter .wrapperTest #sectorThird .leftSide, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide {
+#sectors .centerSector .wrapperSectors .sector .side {
   margin-top: 10px;
   padding-left: 10%;
   display: inherit;
@@ -459,7 +472,7 @@ body h1, body h2, body h3 {
   width: 50%;
 }
 
-#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div {
+#sectors .centerSector .wrapperSectors .sector .side div {
   margin: 9px 0px;
   display: inherit;
   -webkit-box-orient: horizontal;
@@ -474,74 +487,11 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .circle, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .circle, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .circle, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .circle {
-  height: 45px;
-  width: 45px;
-  margin-right: 15px;
-  border-radius: 50%;
-  border: 2px solid #2dce2d;
-  background: rgba(22, 22, 22, 0.7);
-}
-
-#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .value, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .value, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .value, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .value {
-  float: right;
-  font-family: "Montserrat";
-  font-weight: 600;
-  font-size: 20px;
-  color: #FFF;
-}
-
-#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .value p, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .value p, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .value p, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .value p {
-  margin: 0;
-}
-
 #pause {
+  width: 97%;
+  height: 785px;
+  margin: 0 auto;
   display: none;
-  height: 780px;
-  width: 100%;
-  background-color: #2e9b2e;
-  padding: 22px;
-}
-
-#pause #statistics {
-  height: 736px;
-  width: 100%;
-  display: block;
-  background-color: #1F1F1F;
-  border: 5px solid #2E2E2E;
-  padding: 32px;
-}
-
-#pause #statistics #drawnBalls {
-  width: 58%;
-  float: left;
-  border: 2px solid #2E2E2E;
-  padding: 32px;
-  text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-#pause #statistics #drawnBalls .inactive {
-  height: 60px;
-  width: 60px;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.7);
-  color: #848080;
-  font-weight: 600;
-  font-size: 27px;
-  margin: 25px 0px 25px 0px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -550,19 +500,85 @@ body h1, body h2, body h3 {
           align-items: center;
 }
 
-#pause #statistics #drawnBalls .check {
+#pause #statistics {
+  height: 730px;
+  width: 100%;
+  padding: 28px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #1F1F1F;
+  border: 5px solid #2E2E2E;
+}
+
+#pause #statistics #drawnBalls {
+  height: 100%;
+  width: 60%;
+  padding: 50px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  border: 2px solid #2E2E2E;
+}
+
+#pause #statistics #drawnBalls .column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pause #statistics #drawnBalls .column .inactive {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #848080;
+  font-weight: 600;
+  font-size: 27px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pause #statistics #drawnBalls .column .check {
   height: 30px;
   width: 30px;
   border-radius: 50%;
   border: 8px solid #000;
-  margin: 25px 0px 25px 0px;
 }
 
 #pause #statistics #results {
-  width: 40%;
-  float: right;
+  height: 100%;
+  width: 39.5%;
   border: 2px solid #2E2E2E;
-  padding: 22px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -667,20 +683,16 @@ body h1, body h2, body h3 {
 }
 
 .bigBall {
-  height: 55px;
-  width: 55px;
+  height: 60px;
+  width: 60px;
   border-radius: 50%;
   background-color: #FFF;
   color: #000;
   font-weight: 600;
-  font-size: 20px;
+  font-size: 24px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -691,27 +703,17 @@ body h1, body h2, body h3 {
 }
 
 .smallBall {
-  height: 45px;
-  width: 45px;
+  height: 100%;
+  width: 100%;
   border-radius: 50%;
   background-color: #FFF;
   color: #000;
   font-weight: 600;
-  font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin: -2px 0px 0px -2px;
+  font-size: 20px;
+}
+
+.smallBall p {
+  margin: 0 auto;
 }
 
 .currentBall {
@@ -721,21 +723,15 @@ body h1, body h2, body h3 {
   background: #FFF;
   color: #000;
   font-weight: 600;
-  font-size: 36px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: -2px 0px 0px -2px;
 }
 
 .green {
@@ -776,8 +772,6 @@ body h1, body h2, body h3 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 6.5px;
-  margin-left: 7.5px;
   opacity: 0.9;
 }
 /*# sourceMappingURL=main.css.map */
