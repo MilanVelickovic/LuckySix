@@ -1,0 +1,783 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600,900&display=swap");
+body {
+  zoom: 0.9;
+  height: 100%;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background-color: #2e9b2e;
+}
+
+body h1, body h2, body h3 {
+  margin: 0;
+  padding: 0;
+}
+
+#header {
+  height: 68px;
+  width: 100%;
+  background-color: #161616;
+  font-family: "Montserrat";
+}
+
+#header .timer {
+  width: 25%;
+  height: 68px;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #848080;
+}
+
+#header .gameName {
+  width: 50%;
+  height: 68px;
+  float: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .gameName h2 {
+  font-weight: 900;
+  color: #FFF;
+}
+
+#header .gameName h3 {
+  font-weight: 600;
+  color: #848080;
+}
+
+#header .round {
+  width: 25%;
+  height: 68px;
+  float: right;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#header .round h3 {
+  font-weight: 600;
+  color: #848080;
+}
+
+#footer {
+  height: 68px;
+  width: 100%;
+  background-color: #161616;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+#footer .bettingOnColor {
+  height: 68px;
+  width: 33%;
+  float: left;
+  text-align: center;
+  padding: 15px 0px 15px 15px;
+}
+
+#footer .bettingOnColor p {
+  float: left;
+  color: #848080;
+  margin-right: 15px;
+  font-size: 16px;
+}
+
+#footer .bettingOnColor #redBar {
+  width: 15px;
+  height: 0px;
+  background-color: red;
+  position: absolute;
+  left: 120.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #greenBar {
+  width: 15px;
+  height: 0px;
+  background-color: green;
+  position: absolute;
+  left: 140.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #blueBar {
+  width: 15px;
+  height: 0px;
+  background-color: blue;
+  position: absolute;
+  left: 160.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #purpleBar {
+  width: 15px;
+  height: 0px;
+  background-color: purple;
+  position: absolute;
+  left: 181.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #brownBar {
+  width: 15px;
+  height: 0px;
+  background-color: brown;
+  position: absolute;
+  left: 201.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #yellowBar {
+  width: 15px;
+  height: 0px;
+  background-color: yellow;
+  position: absolute;
+  left: 220.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #orangeBar {
+  width: 15px;
+  height: 0px;
+  background-color: orange;
+  position: absolute;
+  left: 240.5px;
+  bottom: 11px;
+}
+
+#footer .bettingOnColor #blackBar {
+  width: 15px;
+  height: 0px;
+  background-color: #848080;
+  position: absolute;
+  left: 260.5px;
+  bottom: 11px;
+}
+
+#footer .firstFiveAverage {
+  height: 68px;
+  width: 34%;
+  float: left;
+  font-family: "Montserrat";
+  font-weight: 600;
+  padding: 10px 0px 10px 0px;
+}
+
+#footer .firstFiveAverage .data1 {
+  width: 43%;
+  float: left;
+}
+
+#footer .firstFiveAverage .data1 p {
+  float: right;
+  margin: 0;
+  padding: 0;
+  color: #848080;
+}
+
+#footer .firstFiveAverage .data1 h3 {
+  float: right;
+  color: #FFF;
+}
+
+#footer .firstFiveAverage .data2 {
+  width: 14%;
+  float: left;
+  text-align: center;
+  color: #FFF;
+}
+
+#footer .firstFiveAverage .data3 {
+  width: 43%;
+  float: left;
+}
+
+#footer .evenOddPercent {
+  height: 68px;
+  width: 33%;
+  float: left;
+}
+
+#footer .evenOddPercent .leftSideEO, #footer .evenOddPercent .rightSideEO {
+  width: 20%;
+  height: 68px;
+  float: left;
+}
+
+#footer .evenOddPercent .leftSideEO p, #footer .evenOddPercent .rightSideEO p {
+  color: #848080;
+  font-family: "Montserrat";
+  font-weight: 600;
+  text-align: center;
+  margin-top: 10px;
+}
+
+#footer .evenOddPercent .centerEO {
+  width: 60%;
+  height: 68px;
+  float: left;
+}
+
+#footer .evenOddPercent .centerEO #evenBar {
+  width: 0px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  background-color: #848080;
+  margin-top: 10px;
+}
+
+#footer .evenOddPercent .centerEO #oddBar {
+  width: 0px;
+  position: relative;
+  bottom: 0;
+  left: 0;
+  height: 20px;
+  background-color: #848080;
+  margin-top: 10px;
+}
+
+#sectors {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorFirst, #sectors #sectorFifth {
+  height: 780px;
+  width: 19%;
+  padding: 40px 0px;
+  padding-left: 5%;
+  background-color: #2e9b2e;
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+#sectors #sectorFirst div, #sectors #sectorFifth div {
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorFirst .circle, #sectors #sectorFifth .circle {
+  height: 45px;
+  width: 45px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 2px solid #2dce2d;
+  background: rgba(22, 22, 22, 0.7);
+}
+
+#sectors #sectorFirst .value, #sectors #sectorFifth .value {
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFF;
+}
+
+#sectors #sectorFirst .value p, #sectors #sectorFifth .value p {
+  margin: 0;
+}
+
+#sectors #sectorCenter {
+  width: 62%;
+  height: 780px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorCenter #sectorSecond {
+  margin-top: 7px;
+  width: 580px;
+  height: 498px;
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+}
+
+#sectors #sectorCenter #sectorSecond .drumBox #drum {
+  width: 450px;
+  height: 450px;
+  background: rgba(22, 22, 22, 0.7);
+  border: 2px solid #2dce2d;
+  border-radius: 50%;
+}
+
+#sectors #sectorCenter #sectorSecond .firstFiveBox .firstFive {
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: inherit;
+      -ms-flex-align: inherit;
+          align-items: inherit;
+  width: 100px;
+  height: 450px;
+  background: rgba(22, 22, 22, 0.7);
+  border: 2px solid #2dce2d;
+  border-radius: 30px;
+}
+
+#sectors #sectorCenter #sectorSecond .firstFiveBox .firstFive .circle {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  border: 2px solid #2dce2d;
+  background: #2e9b2e;
+  margin: 28px 0px 0px 22px;
+}
+
+#sectors #sectorCenter .wrapperTest {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird, #sectors #sectorCenter .wrapperTest #sectorFourth {
+  width: 50%;
+  display: inherit;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird .leftSide, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide {
+  margin-top: 10px;
+  padding-left: 10%;
+  display: inherit;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 50%;
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div {
+  margin: 9px 0px;
+  display: inherit;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .circle, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .circle, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .circle, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .circle {
+  height: 45px;
+  width: 45px;
+  margin-right: 15px;
+  border-radius: 50%;
+  border: 2px solid #2dce2d;
+  background: rgba(22, 22, 22, 0.7);
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .value, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .value, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .value, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .value {
+  float: right;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  color: #FFF;
+}
+
+#sectors #sectorCenter .wrapperTest #sectorThird .leftSide div .value p, #sectors #sectorCenter .wrapperTest #sectorThird .rightSide div .value p, #sectors #sectorCenter .wrapperTest #sectorFourth .leftSide div .value p, #sectors #sectorCenter .wrapperTest #sectorFourth .rightSide div .value p {
+  margin: 0;
+}
+
+#pause {
+  display: none;
+  height: 780px;
+  width: 100%;
+  background-color: #2e9b2e;
+  padding: 22px;
+}
+
+#pause #statistics {
+  height: 736px;
+  width: 100%;
+  display: block;
+  background-color: #1F1F1F;
+  border: 5px solid #2E2E2E;
+  padding: 32px;
+}
+
+#pause #statistics #drawnBalls {
+  width: 58%;
+  float: left;
+  border: 2px solid #2E2E2E;
+  padding: 32px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#pause #statistics #drawnBalls .inactive {
+  height: 60px;
+  width: 60px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: #848080;
+  font-weight: 600;
+  font-size: 27px;
+  margin: 25px 0px 25px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pause #statistics #drawnBalls .check {
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  border: 8px solid #000;
+  margin: 25px 0px 25px 0px;
+}
+
+#pause #statistics #results {
+  width: 40%;
+  float: right;
+  border: 2px solid #2E2E2E;
+  padding: 22px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pause #statistics #results h1 {
+  margin-top: 26px;
+  color: #FFF;
+  font-family: "Montserrat";
+}
+
+#pause #statistics #results h4 {
+  color: #848080;
+}
+
+#pause #statistics #results .firstFiveNumbers {
+  margin-top: 26px;
+}
+
+#pause #statistics #results .firstFiveNumbers .firstFiveInStat {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #161616;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 21px;
+  float: left;
+  margin: 0px 15px 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#pause #statistics #results .firstNumberUnderAbove, #pause #statistics #results .firstNumberEvenOdd {
+  margin-top: 26px;
+}
+
+#pause #statistics #results .firstNumberUnderAbove h2, #pause #statistics #results .firstNumberEvenOdd h2 {
+  color: #FFF;
+  font-family: "Montserrat";
+}
+
+#pause #statistics #results .firstBallColor {
+  margin-top: 26px;
+}
+
+#pause #statistics #results .firstBallColor #firstColor {
+  color: #FFF;
+  font-family: "Montserrat";
+}
+
+#pause #statistics #results .bonusBalls {
+  margin-top: 26px;
+  margin-bottom: 26px;
+}
+
+#pause #statistics #results .bonusBalls .twoBonusBalls {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  background-color: #161616;
+  color: #FFF;
+  font-weight: 600;
+  font-size: 21px;
+  float: left;
+  margin: 0px 15px 0px 15px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.bigBall {
+  height: 55px;
+  width: 55px;
+  border-radius: 50%;
+  background-color: #FFF;
+  color: #000;
+  font-weight: 600;
+  font-size: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -2px 0px 0px -2px;
+}
+
+.smallBall {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  background-color: #FFF;
+  color: #000;
+  font-weight: 600;
+  font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -2px 0px 0px -2px;
+}
+
+.currentBall {
+  width: 450px;
+  height: 450px;
+  border-radius: 50%;
+  background: #FFF;
+  color: #000;
+  font-weight: 600;
+  font-size: 36px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: -2px 0px 0px -2px;
+}
+
+.green {
+  border: 8px solid green;
+}
+
+.blue {
+  border: 8px solid blue;
+}
+
+.red {
+  border: 8px solid red;
+}
+
+.purple {
+  border: 8px solid purple;
+}
+
+.yellow {
+  border: 8px solid yellow;
+}
+
+.orange {
+  border: 8px solid orange;
+}
+
+.brown {
+  border: 8px solid brown;
+}
+
+.black {
+  border: 8px solid black;
+}
+
+.glyphicon-star {
+  color: #FFF;
+  font-size: 26px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 6.5px;
+  margin-left: 7.5px;
+  opacity: 0.9;
+}
+/*# sourceMappingURL=main.css.map */
