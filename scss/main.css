@@ -18,12 +18,13 @@ body h1, body h2, body h3 {
 #header {
   height: 68px;
   width: 100%;
+  padding: 0 2%;
   background-color: #161616;
   font-family: "Montserrat";
 }
 
 #header .timer {
-  width: 25%;
+  width: 22%;
   height: 68px;
   float: left;
   display: -webkit-box;
@@ -36,14 +37,14 @@ body h1, body h2, body h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: flex-start;
+      -ms-flex-align: flex-start;
+          align-items: flex-start;
   color: #848080;
 }
 
 #header .gameName {
-  width: 50%;
+  width: 56%;
   height: 68px;
   float: left;
   display: -webkit-box;
@@ -72,7 +73,7 @@ body h1, body h2, body h3 {
 }
 
 #header .round {
-  width: 25%;
+  width: 22%;
   height: 68px;
   float: right;
   display: -webkit-box;
@@ -85,9 +86,9 @@ body h1, body h2, body h3 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: flex-end;
+      -ms-flex-align: flex-end;
+          align-items: flex-end;
 }
 
 #header .round h3 {
@@ -104,7 +105,7 @@ body h1, body h2, body h3 {
   left: 0;
 }
 
-#footer .bettingOnColor {
+#footer .colorBetting {
   height: 68px;
   width: 33%;
   float: left;
@@ -112,14 +113,15 @@ body h1, body h2, body h3 {
   padding: 15px 0px 15px 15px;
 }
 
-#footer .bettingOnColor p {
+#footer .colorBetting p {
   float: left;
   color: #848080;
-  margin-right: 15px;
+  margin-left: 30px;
+  margin-top: -3px;
   font-size: 16px;
 }
 
-#footer .bettingOnColor #redBar {
+#footer .colorBetting #redBar {
   width: 15px;
   height: 0px;
   background-color: red;
@@ -128,7 +130,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #greenBar {
+#footer .colorBetting #greenBar {
   width: 15px;
   height: 0px;
   background-color: green;
@@ -137,7 +139,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #blueBar {
+#footer .colorBetting #blueBar {
   width: 15px;
   height: 0px;
   background-color: blue;
@@ -146,7 +148,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #purpleBar {
+#footer .colorBetting #purpleBar {
   width: 15px;
   height: 0px;
   background-color: purple;
@@ -155,7 +157,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #brownBar {
+#footer .colorBetting #brownBar {
   width: 15px;
   height: 0px;
   background-color: brown;
@@ -164,7 +166,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #yellowBar {
+#footer .colorBetting #yellowBar {
   width: 15px;
   height: 0px;
   background-color: yellow;
@@ -173,7 +175,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #orangeBar {
+#footer .colorBetting #orangeBar {
   width: 15px;
   height: 0px;
   background-color: orange;
@@ -182,7 +184,7 @@ body h1, body h2, body h3 {
   bottom: 11px;
 }
 
-#footer .bettingOnColor #blackBar {
+#footer .colorBetting #blackBar {
   width: 15px;
   height: 0px;
   background-color: #848080;

@@ -20,20 +20,21 @@ body {
 #header {
     height: 68px;
     width: 100%;
+    padding: 0 2%;
     background-color: $black;
     font-family: "Montserrat";
     .timer {
-        width: 25%;
+        width: 22%;
         height: 68px;
         float: left;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-start;
         color: $gray;
     }
     .gameName {
-        width: 50%;
+        width: 56%;
         height: 68px;
         float: left;
         display: flex;
@@ -50,13 +51,13 @@ body {
         }
     }
     .round {
-        width: 25%;
+        width: 22%;
         height: 68px;
         float: right;
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
+        align-items: flex-end;
         h3 {
             font-weight: 600;
             color: $gray;
@@ -71,7 +72,7 @@ body {
     position: absolute;
     bottom: 0;
     left: 0;
-    .bettingOnColor {
+    .colorBetting {
         height: 68px;
         width: 33%;
         float: left;
@@ -80,7 +81,8 @@ body {
         p {
             float: left;
             color: $gray;
-            margin-right: 15px;
+            margin-left: 30px;
+            margin-top: -3px;
             font-size: 16px;
         }
         #redBar {
@@ -445,7 +447,7 @@ body {
                     align-items:center;
                 }
             }
-            .firstNumberUnderAbove, .firstNumberEvenOdd{
+            .firstNumberBelowAbove, .firstNumberEvenOdd{
                 margin-top: 26px;
                 h2 {
                     color: #FFF;
